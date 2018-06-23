@@ -67,10 +67,10 @@ def update_todo():
     return jsonify({'data': response})
 
 
-@app.route('/todo', methods = ['DELETE'])
-def delete_todo():
+@app.route('/todo/<t_id>', methods = ['DELETE'])
+def delete_todo(t_id):
     collection = mongo.db.todo
-    collection.delete_one({'_id': ObjectId(request.json['id'])})
+    collection.delete_one({'_id': ObjectId(t_id)})
     response = []
     for i in collection.find():
         _dict = {
