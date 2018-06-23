@@ -22,7 +22,6 @@ pyperclip==1.6.2
 pypiwin32==223
 python-dateutil==2.7.3
 pytz==2018.4
-pywin32==223
 scipy==1.1.0
 sip==4.19.8
 six==1.11.0
