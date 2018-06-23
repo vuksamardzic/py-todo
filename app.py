@@ -1,9 +1,10 @@
 from bson import ObjectId
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from flask_pymongo import PyMongo
 
 app = Flask(__name__)
-
+cors = CORS(app)
 app.config['MONGO_DBNAME'] = 'v-todo'
 app.config['MONGO_URI'] = 'mongodb://vs:e1392781@ds163700.mlab.com:63700/v-todo'
 mongo = PyMongo(app)
